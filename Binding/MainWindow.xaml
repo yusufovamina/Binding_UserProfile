@@ -1,0 +1,46 @@
+﻿<Window x:Class="Binding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="461" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://i.pinimg.com/564x/97/f1/1a/97f11a9e8437c9f1885ddedf9822bf2b.jpg"/>
+        </Grid.Background>
+        <Image Source="https://freesvg.org/img/abstract-user-flat-4.png" Margin="581,6,59,271" OpacityMask="White"></Image>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
+        <Label Content="Surname" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
+        <Label Content="E-mail" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
+        <Label Content="Age" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
+        <Label Content="Gender" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
+        <TextBox Name="Name" HorizontalAlignment="Left" Margin="110,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
+        <TextBox Name="Surname" HorizontalAlignment="Left" Margin="110,79,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
+        <TextBox Name="Email" HorizontalAlignment="Left" Margin="110,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
+        <Slider Name="Age"  TickFrequency="1" IsSnapToTickEnabled="True"  VerticalAlignment="Top"  Minimum="18" Maximum="130"  Margin="98,168,562,0" Height="28"/>
+        <ListBox Name="Gender"  Margin="98,211,562,161">
+            <ListBoxItem Tag="Male">Male</ListBoxItem>
+            <ListBoxItem Tag="Female">Female</ListBoxItem>
+        </ListBox>
+        <TextBlock VerticalAlignment='Top' Margin="585,181,59,0" Name ="namelbl" 
+                 Text="{Binding ElementName=Name,Path=Text, UpdateSourceTrigger=PropertyChanged}" FontFamily="Times New Roman" FontSize="22" Height="51"></TextBlock>
+        <TextBlock VerticalAlignment='Top' Margin="587,232,57,0" Name ="surnamelbl" 
+            Text="{Binding ElementName=Surname,Path=Text, UpdateSourceTrigger=PropertyChanged}" 
+                   FontFamily="Times New Roman" FontSize="22" Height="51"></TextBlock>
+        <TextBlock VerticalAlignment='Top' Margin="587,283,57,0" Name ="emaillbl" 
+         Text="{Binding ElementName=Email,Path=Text, UpdateSourceTrigger=PropertyChanged}"
+                   FontFamily="Times New Roman" FontSize="22" Height="51"></TextBlock>
+
+        <TextBlock VerticalAlignment='Top' Margin="589,334,55,0" Name ="agelbl" 
+         Text="{Binding ElementName=Age,Path=Value}"
+                   FontFamily="Times New Roman" FontSize="22" Height="52"></TextBlock>
+
+        <TextBlock VerticalAlignment='Top' Margin="589,384,55,0" Name ="genderlbl" 
+         Text="{Binding ElementName=Gender,Path=SelectedItem.Tag, UpdateSourceTrigger=PropertyChanged}"
+                   FontFamily="Times New Roman" FontSize="22" Height="51"></TextBlock>
+
+
+    </Grid>
+</Window>

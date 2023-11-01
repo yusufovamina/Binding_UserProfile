@@ -16,9 +16,9 @@
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
         <Label Content="Age" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
         <Label Content="Gender" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="24"/>
-        <TextBox Name="Name" HorizontalAlignment="Left" Margin="110,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
-        <TextBox Name="Surname" HorizontalAlignment="Left" Margin="110,79,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
-        <TextBox Name="Email" HorizontalAlignment="Left" Margin="110,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
+        <TextBox Name="Name" PreviewTextInput="NamePreviewInput" HorizontalAlignment="Left" Margin="110,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
+        <TextBox Name="Surname" PreviewTextInput="NamePreviewInput" HorizontalAlignment="Left" Margin="110,79,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
+        <TextBox Name="Email" PreviewTextInput="EmailPreviewInput" HorizontalAlignment="Left" Margin="110,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" Height="24"/>
         <Slider Name="Age"  TickFrequency="1" IsSnapToTickEnabled="True"  VerticalAlignment="Top"  Minimum="18" Maximum="130"  Margin="98,168,562,0" Height="28"/>
         <ListBox Name="Gender"  Margin="98,211,562,161">
             <ListBoxItem Tag="Male">Male</ListBoxItem>

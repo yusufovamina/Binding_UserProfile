@@ -24,5 +24,36 @@ namespace Binding
         {
             InitializeComponent();
         }
+
+        public bool IsLetter(string text)
+        {
+            foreach (char ch in text) {
+            if(char.IsLetter (ch)) {
+                   return true;
+                }
+            
+            }
+            return false;
+        }
+        public void NamePreviewInput(object sender, TextCompositionEventArgs e)
+        {
+                  
+                if (!(IsLetter(e.Text)))
+                {
+                    e.Handled = true;
+                }
+        }
+
+        public bool IsEmailValid(string text)
+        {
+            return text.Contains("@");
+        }
+        public void EmailPreviewInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!IsEmailValid(e.Text))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
